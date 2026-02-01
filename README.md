@@ -4,9 +4,7 @@ A modern web design system inspired by the nostalgic Apple Aqua interface (circa
 
 ## 🚀 Live Demo
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fleejiwon-designs%2Fdesign-system-apple-2000)
-
-*(Note: Once deployed, replace this section with your actual live URL!)*
+[**Visit Live Demo**](https://dsystem.jiwon-lee.work/)
 
 ## 📖 About
 This project serves as a showcase and documentation site for the Aqua2000 Design System. It demonstrates various atoms, molecules, and organisms styled with the glossy, vibrant aesthetic of the early 2000s, modernized for today's web.
