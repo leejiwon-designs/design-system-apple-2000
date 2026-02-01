@@ -4,7 +4,7 @@ A modern web design system inspired by the nostalgic Apple Aqua interface (circa
 
 ## 🚀 Live Demo
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F<your-username>%2Fdesign-system-jiwon)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fleejiwon-designs%2Fdesign-system-apple-2000)
 
 *(Note: Once deployed, replace this section with your actual live URL!)*
 
@@ -21,8 +21,8 @@ This project serves as a showcase and documentation site for the Aqua2000 Design
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/<your-username>/design-system-jiwon.git
-    cd design-system-jiwon
+    git clone https://github.com/leejiwon-designs/design-system-apple-2000.git
+    cd design-system-apple-2000
     ```
 
 2.  Install dependencies:
