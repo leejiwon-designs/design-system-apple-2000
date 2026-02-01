@@ -1,0 +1,146 @@
+.doc-page {
+    max-width: 900px;
+}
+
+.doc-page__header {
+    margin-bottom: var(--space-16);
+    padding-bottom: var(--space-8);
+    border-bottom: var(--border-width-thin) solid var(--border-color-light);
+}
+
+.doc-page__title {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-4);
+}
+
+.doc-page__level {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-lg);
+    /* Pill shape */
+    margin-bottom: var(--space-4);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.05);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.doc-page__level--foundation {
+    background: linear-gradient(to bottom, #f3e5f5, #e1bee7);
+    color: #4a148c;
+    border-color: #ce93d8;
+}
+
+.doc-page__level--atom {
+    background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+    color: #0d47a1;
+    border-color: #90caf9;
+}
+
+.doc-page__level--molecule {
+    background: linear-gradient(to bottom, #e0f2f1, #b2dfdb);
+    color: #004d40;
+    border-color: #80cbc4;
+}
+
+.doc-page__level--organism {
+    background: linear-gradient(to bottom, #fff3e0, #ffe0b2);
+    color: #e65100;
+    border-color: #ffcc80;
+}
+
+.doc-page__description {
+    font-size: var(--font-size-md);
+    color: var(--color-text-secondary);
+}
+
+.doc-page__section {
+    margin-bottom: var(--space-16);
+}
+
+.doc-page__section-title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-2);
+    border-bottom: var(--border-width-thin) solid var(--border-color-light);
+}
+
+/* Preview Box */
+.doc-page__preview {
+    padding: var(--space-12);
+    background-color: var(--color-gray-100);
+    border: var(--border-width-thin) solid var(--border-color-light);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-8);
+}
+
+/* Code Block */
+.doc-page__code {
+    position: relative;
+}
+
+.doc-page__code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4) var(--space-8);
+    background-color: var(--color-gray-700);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.doc-page__code-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-400);
+    text-transform: uppercase;
+}
+
+.doc-page__code-copy {
+    font-size: var(--font-size-xs);
+    color: var(--color-aqua-300);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    transition: background-color var(--transition-fast);
+}
+
+.doc-page__code-copy:hover {
+    background-color: var(--color-gray-600);
+}
+
+.doc-page__code-copy:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+}
+
+.doc-page__code pre {
+    margin: 0;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+/* Props Table */
+.doc-page__props-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-sm);
+}
+
+.doc-page__props-table th,
+.doc-page__props-table td {
+    padding: var(--space-4) var(--space-6);
+    text-align: left;
+    border-bottom: var(--border-width-thin) solid var(--border-color-light);
+}
+
+.doc-page__props-table th {
+    background-color: var(--color-gray-100);
+    font-weight: var(--font-weight-bold);
+}
+
+.doc-page__props-table code {
+    font-size: var(--font-size-xs);
+}

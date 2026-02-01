@@ -1,0 +1,81 @@
+.accordion {
+    display: grid;
+    gap: var(--space-3);
+}
+
+.accordion__item {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-gray-300);
+    background: #ffffff;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 3px 10px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.accordion__trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    border: 0;
+    background: linear-gradient(180deg,
+            #ffffff 0%,
+            #f5f7fa 20%,
+            #e2e7ee 100%);
+    color: var(--color-text-primary);
+    font-family: var(--font-family-system);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+}
+
+.accordion__trigger:hover {
+    background: linear-gradient(180deg, #ffffff 0%, #edf3f8 100%);
+}
+
+.accordion__trigger:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: calc(var(--focus-ring-offset) * -1);
+}
+
+.accordion__icon {
+    display: inline-flex;
+    transform: rotate(0deg);
+    transition: transform var(--transition-fast);
+}
+
+.accordion__item[data-state='open'] .accordion__icon {
+    transform: rotate(90deg);
+}
+
+.accordion__panel {
+    padding: var(--space-4) var(--space-5);
+    background: linear-gradient(180deg, #ffffff 0%, #f1f6fb 100%);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-base);
+}
+
+.accordion__trigger::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    height: 45%;
+    border-radius: calc(var(--radius-md) - 2px);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+.accordion__item--disabled {
+    opacity: 0.6;
+}
+
+.accordion__item--disabled .accordion__trigger {
+    cursor: not-allowed;
+}

@@ -1,0 +1,215 @@
+/*
+ * Aqua2000 Design Tokens
+ * Based on Apple Aqua (circa 2000) design language
+ * Colors, spacing, typography, and semantic tokens
+ */
+
+:root {
+   /* ==========================================================================
+     COLOR PALETTE - Raw Values
+     ========================================================================== */
+
+   /* Primary Blues (Aqua signature) */
+   --color-aqua-100: #e6f3ff;
+   --color-aqua-200: #b3daff;
+   --color-aqua-300: #80c1ff;
+   --color-aqua-400: #4da8ff;
+   --color-aqua-500: #1a8fff;
+   --color-aqua-600: #0066cc;
+   --color-aqua-700: #004d99;
+   --color-aqua-800: #003366;
+
+   /* Graphite (Alternative Aqua theme) */
+   --color-graphite-100: #e8e8e8;
+   --color-graphite-200: #c4c4c4;
+   --color-graphite-300: #a0a0a0;
+   --color-graphite-400: #7c7c7c;
+   --color-graphite-500: #585858;
+   --color-graphite-600: #404040;
+   --color-graphite-700: #2c2c2c;
+   --color-graphite-800: #1a1a1a;
+
+   /* System Grays */
+   --color-gray-50: #fafafa;
+   --color-gray-100: #f5f5f5;
+   --color-gray-200: #eeeeee;
+   --color-gray-300: #e0e0e0;
+   --color-gray-400: #bdbdbd;
+   --color-gray-500: #9e9e9e;
+   --color-gray-600: #757575;
+   --color-gray-700: #616161;
+   --color-gray-800: #424242;
+   --color-gray-900: #212121;
+
+   /* Surface Colors (Window/Dialog backgrounds) */
+   --color-surface-window: #d6d6d6;
+   --color-surface-window-active: #e8e8e8;
+   --color-surface-content: #ffffff;
+   --color-surface-stripes: linear-gradient(to bottom,
+         #f0f0f0 0%,
+         #f0f0f0 50%,
+         #e4e4e4 50%,
+         #e4e4e4 100%);
+
+   /* Status Colors */
+   --color-success: #2ecc40;
+   --color-warning: #ff851b;
+   --color-error: #ff4136;
+
+   /* Text Colors */
+   --color-text-primary: #1a1a1a;
+   --color-text-secondary: #4a4a4a;
+   --color-text-disabled: #9e9e9e;
+   --color-text-inverse: #ffffff;
+
+   /* ==========================================================================
+     SPACING - 2px Grid System (Aqua HIG)
+     ========================================================================== */
+   --space-0: 0;
+   --space-1: 2px;
+   --space-2: 4px;
+   --space-3: 6px;
+   --space-4: 8px;
+   --space-5: 10px;
+   --space-6: 12px;
+   --space-7: 14px;
+   --space-8: 16px;
+   --space-10: 20px;
+   --space-12: 24px;
+   --space-16: 32px;
+   --space-20: 40px;
+   --space-24: 48px;
+
+   /* ==========================================================================
+     TYPOGRAPHY
+     ========================================================================== */
+
+   /* Font Families */
+   --font-family-system: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+   --font-family-mono: 'Monaco', 'Menlo', 'Consolas', monospace;
+
+   /* Font Sizes */
+   --font-size-xs: 10px;
+   --font-size-sm: 11px;
+   --font-size-base: 12px;
+   --font-size-md: 13px;
+   --font-size-lg: 14px;
+   --font-size-xl: 16px;
+   --font-size-2xl: 18px;
+   --font-size-3xl: 22px;
+
+   /* Font Weights */
+   --font-weight-normal: 400;
+   --font-weight-medium: 500;
+   --font-weight-bold: 700;
+
+   /* Line Heights */
+   --line-height-tight: 1.2;
+   --line-height-base: 1.4;
+   --line-height-loose: 1.6;
+
+   /* ==========================================================================
+     BORDERS & RADII
+     ========================================================================== */
+   --radius-sm: 3px;
+   --radius-md: 5px;
+   --radius-lg: 8px;
+   --radius-xl: 12px;
+   --radius-full: 9999px;
+
+   --border-width-thin: 1px;
+   --border-width-medium: 2px;
+
+   --border-color-default: #8e8e8e;
+   --border-color-light: #c4c4c4;
+   --border-color-focus: var(--color-aqua-500);
+
+   /* ==========================================================================
+     SHADOWS (Aqua-style drop shadows)
+     ========================================================================== */
+   --shadow-window: 0 8px 20px rgba(0, 0, 0, 0.35);
+   --shadow-dialog: 0 12px 30px rgba(0, 0, 0, 0.4);
+   --shadow-popover: 0 4px 12px rgba(0, 0, 0, 0.2);
+   --shadow-button: 0 1px 2px rgba(0, 0, 0, 0.15);
+   --shadow-button-pressed: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+
+   /* ==========================================================================
+     FOCUS STATES (WCAG 2.1)
+     ========================================================================== */
+   --focus-ring-width: 3px;
+   --focus-ring-offset: 2px;
+   --focus-ring-color: var(--color-aqua-500);
+   --focus-ring: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+
+   /* ==========================================================================
+     TRANSITIONS
+     ========================================================================== */
+   --transition-fast: 100ms ease-out;
+   --transition-base: 200ms ease-out;
+   --transition-slow: 300ms ease-out;
+
+   /* ==========================================================================
+     Z-INDEX LAYERS
+     ========================================================================== */
+   --z-base: 0;
+   --z-dropdown: 100;
+   --z-sticky: 200;
+   --z-modal: 300;
+   --z-popover: 400;
+   --z-tooltip: 500;
+
+   /* ==========================================================================
+     COMPONENT-SPECIFIC TOKENS
+     ========================================================================== */
+
+   /* Window Frame */
+   --window-titlebar-height: 22px;
+   --window-button-size: 12px;
+   --window-button-spacing: 8px;
+
+   /* Buttons */
+   --button-height-sm: 20px;
+   --button-height-md: 24px;
+   --button-height-lg: 28px;
+   --button-padding-x: var(--space-8);
+   --button-padding-y: var(--space-2);
+
+   /* Toolbar */
+   --toolbar-height: 38px;
+
+   /* Sidebar */
+   --sidebar-width: 200px;
+   --sidebar-width-collapsed: 48px;
+
+   /* ==========================================================================
+     GRADIENTS (Aqua Glass & Gel)
+     ========================================================================== */
+
+   /* Shared Overlays */
+   --gradient-glass-shine: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.05) 55%, rgba(255, 255, 255, 0));
+   --gradient-glass-glow: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.35) 22%, rgba(255, 255, 255, 0) 55%);
+
+   /* Button: Default (Aqua) */
+   --gradient-button-aqua: linear-gradient(to bottom, #7fcfff 0%, #4db8ff 10%, #1a8fff 50%, #0066cc 100%);
+   --gradient-button-aqua-hover: linear-gradient(to bottom, #8dd6ff 0%, #5cc2ff 10%, #2a9fff 50%, #0077e6 100%);
+   --gradient-button-aqua-active: linear-gradient(to bottom, #0066cc 0%, #1a8fff 50%, #4db8ff 100%);
+
+   /* Button: Secondary (Gray) */
+   --gradient-button-gray: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 10%, #d6d6d6 50%, #b8b8b8 100%);
+   --gradient-button-gray-hover: linear-gradient(to bottom, #ffffff 0%, #f5f5f5 10%, #e0e0e0 50%, #c4c4c4 100%);
+   --gradient-button-gray-active: linear-gradient(to bottom, #b8b8b8 0%, #d6d6d6 50%, #f0f0f0 100%);
+
+   /* Button: Graphite */
+   --gradient-button-graphite: linear-gradient(to bottom, #a8a8a8 0%, #888888 10%, #585858 50%, #404040 100%);
+   --gradient-button-graphite-hover: linear-gradient(to bottom, #b8b8b8 0%, #989898 10%, #686868 50%, #505050 100%);
+   --gradient-button-graphite-active: linear-gradient(to bottom, #404040 0%, #585858 50%, #888888 100%);
+
+   /* Button: Danger */
+   --gradient-button-danger: linear-gradient(to bottom, #ff8080 0%, #ff5c5c 10%, #ff4136 50%, #cc2200 100%);
+   --gradient-button-danger-hover: linear-gradient(to bottom, #ff9999 0%, #ff7070 10%, #ff5545 50%, #e62800 100%);
+   --gradient-button-danger-active: linear-gradient(to bottom, #cc2200 0%, #ff4136 50%, #ff5c5c 100%);
+
+   /* Tabs */
+   --gradient-tab: linear-gradient(to bottom, #d6d6d6, #c0c0c0);
+   --gradient-tab-hover: linear-gradient(to bottom, #e0e0e0, #d0d0d0);
+}

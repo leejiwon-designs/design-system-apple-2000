@@ -1,0 +1,114 @@
+.app-shell {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-shell__layout {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+
+.app-shell__sidebar {
+    flex: 0 0 auto;
+}
+
+.app-shell__overlay {
+    display: none;
+}
+
+.app-shell__main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.app-shell__mobile-bar {
+    display: none;
+}
+
+.app-shell__menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 28px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-gray-400);
+    background: linear-gradient(180deg, #ffffff 0%, #ececec 100%);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 1px 2px rgba(0, 0, 0, 0.12);
+    color: var(--color-text-primary);
+    cursor: pointer;
+}
+
+.app-shell__menu-button:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+}
+
+.app-shell__content {
+    flex: 1;
+    padding: var(--space-16);
+    background-color: var(--color-surface-content);
+    overflow-y: auto;
+}
+
+@media (max-width: 900px) {
+    .app-shell {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .app-shell__layout {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .app-shell__sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform var(--transition-fast);
+        z-index: 20;
+    }
+
+    .app-shell__sidebar--open {
+        transform: translateX(0);
+    }
+
+    .app-shell__overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.25);
+        display: none;
+        z-index: 15;
+    }
+
+    .app-shell__overlay--visible {
+        display: block;
+    }
+
+    .app-shell__mobile-bar {
+        display: flex;
+        align-items: center;
+        padding: var(--space-4) var(--space-6);
+        border-bottom: 1px solid var(--color-gray-200);
+        background: linear-gradient(180deg, #f7f9fb 0%, #edf2f7 100%);
+    }
+
+    .app-shell__content {
+        padding: var(--space-8);
+    }
+}
+
+@media (max-width: 600px) {
+    .app-shell__content {
+        padding: var(--space-6);
+    }
+}

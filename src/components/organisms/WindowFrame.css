@@ -1,0 +1,113 @@
+.window-frame {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-surface-window);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    /* Top corners rounded */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.1);
+    /* Deep drop shadow + border */
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.window-frame--active {
+    /* Active state logic if needed beyond defaults */
+}
+
+.window-frame__title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Title centered */
+    position: relative;
+    height: 22px;
+    /* Standard Aqua title bar height */
+    background: linear-gradient(to bottom, #e6e6e6, #dcdcdc);
+    /* Passive gray */
+    border-bottom: 1px solid var(--color-gray-400);
+    user-select: none;
+    cursor: default;
+}
+
+.window-frame--active .window-frame__title-bar {
+    /* Classic Aqua active title bar stripes/gradient */
+    background:
+        repeating-linear-gradient(90deg,
+            transparent,
+            transparent 1px,
+            rgba(255, 255, 255, 0.1) 1px,
+            rgba(255, 255, 255, 0.1) 2px),
+        linear-gradient(to bottom, #ebebeb, #d4d4d4);
+}
+
+.window-frame__controls {
+    position: absolute;
+    left: 8px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.window-frame__button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5), 0 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: default;
+}
+
+.window-frame__button--close {
+    background-color: #ff5f57;
+    /* Red */
+    border-color: #e33e32;
+}
+
+.window-frame__button--minimize {
+    background-color: #ffbd2e;
+    /* Yellow */
+    border-color: #e1a116;
+}
+
+.window-frame__button--zoom {
+    background-color: #28c940;
+    /* Green */
+    border-color: #1d9d30;
+}
+
+/* Dim controls when inactive */
+.window-frame:not(.window-frame--active) .window-frame__button {
+    background-color: #d0d0d0;
+    border-color: #b0b0b0;
+}
+
+.window-frame__title {
+    font-family: var(--font-family-system);
+    font-size: 13px;
+    color: var(--color-text-primary);
+    opacity: 0.5;
+    font-weight: 400;
+    margin-top: -2px;
+    /* Visual adjustment */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 120px);
+}
+
+.window-frame--active .window-frame__title {
+    color: #333;
+    opacity: 1;
+    font-weight: 600;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.window-frame__content {
+    flex: 1;
+    position: relative;
+    background-color: var(--color-surface-content);
+    /* Usually white */
+    overflow: auto;
+}

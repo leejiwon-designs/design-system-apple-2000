@@ -1,0 +1,81 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--space-3);
+    border-radius: 999px;
+    font-family: var(--font-family-system);
+    font-weight: var(--font-weight-medium);
+    line-height: 1;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.badge::before {
+    content: '';
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    height: 55%;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+.badge--sm {
+    height: 16px;
+    font-size: var(--font-size-xs);
+}
+
+.badge--md {
+    height: 20px;
+    font-size: var(--font-size-sm);
+}
+
+.badge--neutral {
+    background: linear-gradient(180deg, #ffffff 0%, #f0f0f0 35%, #d9d9d9 100%);
+    border-color: #bdbdbd;
+    color: var(--color-text-primary);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.7) inset,
+        0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.badge--info {
+    background: linear-gradient(180deg, #f5fbff 0%, #e7f2ff 40%, #d0e6ff 100%);
+    border-color: var(--color-aqua-300);
+    color: var(--color-aqua-700);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.7) inset,
+        0 2px 6px rgba(0, 0, 0, 0.14);
+}
+
+.badge--success {
+    background: linear-gradient(180deg, #f3fff8 0%, #e6fff2 40%, #ccf5dc 100%);
+    border-color: #7be58b;
+    color: #167a2e;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.7) inset,
+        0 2px 6px rgba(0, 0, 0, 0.14);
+}
+
+.badge--warning {
+    background: linear-gradient(180deg, #fff9ee 0%, #ffefcf 40%, #ffd99a 100%);
+    border-color: #ffb84d;
+    color: #8a4b00;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.7) inset,
+        0 2px 6px rgba(0, 0, 0, 0.14);
+}
+
+.badge--error {
+    background: linear-gradient(180deg, #fff5f5 0%, #ffe6e6 40%, #ffc7c7 100%);
+    border-color: #ff8a80;
+    color: #a32020;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.7) inset,
+        0 2px 6px rgba(0, 0, 0, 0.14);
+}

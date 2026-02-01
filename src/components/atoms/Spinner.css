@@ -1,0 +1,47 @@
+.spinner {
+    display: inline-block;
+    color: var(--color-gray-500);
+    animation: spinner-rotate 1s steps(12) infinite;
+}
+
+.spinner--sm {
+    width: 16px;
+    height: 16px;
+}
+
+.spinner--md {
+    width: 24px;
+    height: 24px;
+}
+
+.spinner--lg {
+    width: 32px;
+    height: 32px;
+}
+
+.spinner--xl {
+    width: 48px;
+    height: 48px;
+}
+
+.spinner--primary {
+    color: var(--color-aqua-500);
+}
+
+.spinner--secondary {
+    color: var(--color-gray-500);
+}
+
+.spinner--inverse {
+    color: var(--color-text-inverse);
+}
+
+@keyframes spinner-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

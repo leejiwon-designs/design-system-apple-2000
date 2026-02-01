@@ -1,0 +1,65 @@
+.sidebar-organism {
+    width: 100%;
+    height: 100%;
+    min-width: 150px;
+    background-color: #e8e8e8;
+    /* Standard source list background */
+    /* Or a slight blue tint: #edf2fa */
+    background: linear-gradient(to right, #e8e8e8, #e0e0e0);
+    border-right: 1px solid var(--color-gray-400);
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-2) 0;
+    overflow-y: auto;
+    user-select: none;
+}
+
+.sidebar-organism__group {
+    margin-bottom: var(--space-4);
+}
+
+.sidebar-organism__header {
+    padding: var(--space-2) var(--space-4);
+    font-family: var(--font-family-system);
+    font-size: 11px;
+    font-weight: 600;
+    color: #7a7a7a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-organism__item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 4px 12px;
+    margin: 0 4px;
+    /* Slight inset like classic Mac OS */
+    font-family: var(--font-family-system);
+    font-size: 13px;
+    color: var(--color-text-primary);
+    border-radius: 4px;
+    cursor: default;
+    text-decoration: none;
+}
+
+.sidebar-organism__item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Very subtle hover */
+}
+
+.sidebar-organism__item--active,
+.sidebar-organism__item--active:hover {
+    background-color: #4da8ff;
+    /* Aqua Blue selection */
+    /* Often classic Mac used a gradient here too */
+    background: linear-gradient(to bottom, #7fcfff, #1a8fff);
+    color: white;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Fix icon color in active state */
+.sidebar-organism__item--active .icon {
+    color: white;
+    /* Assuming icons inherit color */
+}

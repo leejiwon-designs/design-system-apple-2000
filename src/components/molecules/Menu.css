@@ -1,0 +1,82 @@
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu__trigger {
+    /* Inherits button styling or customized */
+}
+
+.menu__content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    /* Modern substitute for Aqua translucency */
+    border: 1px solid var(--color-gray-400);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    /* Mac Classic style: square top attached to bar, rounded bottom */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: var(--space-1) 0;
+    z-index: 200;
+    margin-top: -1px;
+    /* Overlap trigger border */
+}
+
+/* Optional: Detached menu / context menu style */
+.menu__content--detached {
+    border-radius: var(--radius-md);
+    margin-top: var(--space-2);
+}
+
+.menu__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: var(--space-2) var(--space-4);
+    font-family: var(--font-family-system);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: default;
+    gap: var(--space-2);
+}
+
+.menu__item:hover,
+.menu__item:focus {
+    background-color: var(--color-aqua-500);
+    color: var(--color-text-inverse);
+    outline: none;
+}
+
+.menu__item-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+}
+
+.menu__item--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.menu__separator {
+    height: 1px;
+    background-color: var(--color-gray-300);
+    margin: var(--space-1) 0;
+}
+
+.menu__group-label {
+    padding: var(--space-1) var(--space-4);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-secondary);
+    pointer-events: none;
+}

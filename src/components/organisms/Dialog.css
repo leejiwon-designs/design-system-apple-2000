@@ -1,0 +1,67 @@
+.dialog {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-surface-window);
+    /* Light gray usually */
+    background-image: repeating-linear-gradient(90deg,
+            transparent,
+            transparent 1px,
+            rgba(255, 255, 255, 0.5) 1px,
+            rgba(255, 255, 255, 0.5) 2px);
+    /* Subtle pinstripe texture */
+    border: 1px solid var(--color-gray-400);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    /* Deep modal shadow */
+    min-width: 400px;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.dialog__content {
+    display: flex;
+    padding: var(--space-6);
+    gap: var(--space-4);
+}
+
+.dialog__icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    /* Placeholder for App Icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-primary);
+}
+
+.dialog__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.dialog__title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.dialog__description {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+    line-height: 1.4;
+}
+
+.dialog__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: var(--space-4) var(--space-6);
+    gap: var(--space-3);
+    /* Footer usually doesn't have stripes or has them continued. 
+     For classic Aqua, buttons sit on the stripes. */
+}
+
+/* Variant: Sheet (Attached to window) - Optional future enhancement */
+/* For now, we focus on standalone Modal/Alert style */

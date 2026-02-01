@@ -1,0 +1,47 @@
+.loading-bar {
+    position: relative;
+    height: 10px;
+    width: 180px;
+    border-radius: var(--radius-md);
+    border: 1px solid #9a9a9a;
+    background: linear-gradient(180deg, #f8f8f8 0%, #e6e6e6 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        inset 0 1px 2px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.loading-bar__fill {
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(180deg, #8fd0ff 0%, #4db8ff 50%, #1a8fff 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.6),
+        0 0 0 1px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.loading-bar__fill::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+.loading-bar__fill--indeterminate {
+    width: 45%;
+    animation: loading-bar-slide 1.2s ease-in-out infinite;
+}
+
+@keyframes loading-bar-slide {
+    0% {
+        transform: translateX(-60%);
+    }
+    50% {
+        transform: translateX(60%);
+    }
+    100% {
+        transform: translateX(180%);
+    }
+}

@@ -1,0 +1,165 @@
+.text {
+    font-family: var(--font-family-system);
+    margin: 0;
+    padding: 0;
+    line-height: var(--line-height-base);
+}
+
+/* ==========================================================================
+   VARIANTS (Colors)
+   ========================================================================== */
+.text--primary {
+    color: var(--color-text-primary);
+}
+
+.text--secondary {
+    color: var(--color-text-secondary);
+}
+
+.text--disabled {
+    color: var(--color-text-disabled);
+}
+
+.text--inverse {
+    color: var(--color-text-inverse);
+}
+
+.text--success {
+    color: var(--color-success);
+}
+
+.text--warning {
+    color: var(--color-warning);
+}
+
+.text--error {
+    color: var(--color-error);
+}
+
+.text--link {
+    color: var(--color-aqua-600);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text--link:hover {
+    color: var(--color-aqua-700);
+}
+
+/* ==========================================================================
+   SIZES
+   ========================================================================== */
+.text--xs {
+    font-size: var(--font-size-xs);
+}
+
+.text--sm {
+    font-size: var(--font-size-sm);
+}
+
+.text--base {
+    font-size: var(--font-size-base);
+}
+
+.text--md {
+    font-size: var(--font-size-md);
+}
+
+.text--lg {
+    font-size: var(--font-size-lg);
+}
+
+.text--xl {
+    font-size: var(--font-size-xl);
+}
+
+.text--2xl {
+    font-size: var(--font-size-2xl);
+}
+
+.text--3xl {
+    font-size: var(--font-size-3xl);
+}
+
+/* ==========================================================================
+   HEADINGS
+   ========================================================================== */
+.text--h1 {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+}
+
+.text--h2 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+}
+
+.text--h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+}
+
+.text--h4 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+}
+
+.text--h5 {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-tight);
+}
+
+.text--h6 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-tight);
+}
+
+/* ==========================================================================
+   WEIGHTS
+   ========================================================================== */
+.text--normal {
+    font-weight: var(--font-weight-normal);
+}
+
+.text--medium {
+    font-weight: var(--font-weight-medium);
+}
+
+.text--bold {
+    font-weight: var(--font-weight-bold);
+}
+
+/* ==========================================================================
+   ALIGNMENT
+   ========================================================================== */
+.text--left {
+    text-align: left;
+}
+
+.text--center {
+    text-align: center;
+}
+
+.text--right {
+    text-align: right;
+}
+
+.text--justify {
+    text-align: justify;
+}
+
+/* ==========================================================================
+   TRUNCATION
+   ========================================================================== */
+.text--truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
